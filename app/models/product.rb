@@ -1,7 +1,7 @@
 class Product < ApplicationRecord
   has_many :reviews, dependent: :destroy
 
-  scope :usa_made, -> { where(country_of_origin: "USA")}
+  scope :usa_made, -> { where(country_of_origin: "US")}
 
   scope :three_most_recent, -> { order(created_at: :desc).limit(3)}
 

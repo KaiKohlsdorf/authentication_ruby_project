@@ -1,24 +1,39 @@
-# README
+# Specialty Tea Store
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Ruby/Rails Specialty Tea Store Site 
 
-Things you may want to cover:
+#### By [Kai Kohlsdorf](http://github.com/KaiKohlsdorf)
 
-* Ruby version
+## Description
 
-* System dependencies
+This basic site allows a user to browse products and add reviews. Admins can add, edit and delete products on the site. The homepage sorts products by most reviewed, most recently added, and products made in the USA.
 
-* Configuration
+## Setup/Installation Requirements
 
-* Database creation
+* In the command line, clone this repository with $ git clone https://github.com/KaiKohlsdorf/specialty-products
+* Navigate into the directory and in the command line, install dependent gems by using command $ bundle install (if you don't already have the bundler gem installed, first run $ gem install bundler)
+* To create the necessary database, use the following commands in the command line while in the root directory:
+  * $ rake db:create
+  * $ rake db:migrate
+  * $ rake db:test:prepare
+* To launch the application, while in the root directory use command $ rails s
+* In any browser (preferably Chrome), navigate to http://localhost:3000/
+* To run the test suite, use command $ rspec
 
-* Database initialization
+## Known Bugs
 
-* How to run the test suite
+* There is no admin login. Currently, all site visitors have access to adding, updating and deleting products.
 
-* Services (job queues, cache servers, search engines, etc.)
+## Technologies Used
 
-* Deployment instructions
+Ruby, Rails, HTML, CSS, Bootstrap, Git
 
-* ...
+### License
+
+[MIT](https://github.com/KaiKohlsdorf/specialty_products/blob/main/LICENSE)
+
+Copyright (c) 2022 **Kai Kohlsdorf**
+
+## Contact Information
+
+Contact the author at kai.w.kohlsdorf@gmail.com 
