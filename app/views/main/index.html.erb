@@ -1,0 +1,44 @@
+<h2>Welcome to Global Premier Teas!</h2>
+<h3>We supply premier teas from around the globe.</h3>
+<br>
+<h2>New Arrivals</h2>
+
+<% if @most_recent_products.any? %>
+  <% @most_recent_products.each do |product| %>
+
+    <h2><%= link_to product.name, product_path(product) %></h2>
+      <p>Cost: <%= product.cost %></p>
+      <p>Country of origin: <%= product.country_of_origin %></p>
+      <p>Total reviews: <%= product.reviews.length %></p>
+      <p><%= link_to "View Product", product_path(product) %></p>
+  <% end %>
+<% else %>
+<p>There are no products to display</p>
+<% end %>
+
+
+<h2>Most reviewed</h2>
+<% if @most_reviews.any? %>
+  <% @most_reviews.each do |product| %>
+    <h2><%= link_to product.name, product_path(product) %></h2>
+      <p>Country of origin: <%= product.country_of_origin %></p>
+      <p>Cost: <%= product.cost %></p>
+      <p>Total reviews: <%= product.reviews.length %></p>
+      <p><%= link_to "View Product", product_path(product) %></p>
+  <% end %>
+<% else %>
+<p>There are no products to display</p>
+<% end %>
+
+<h2>Products made in the USA</h2>
+<% if @usa_made_products.any? %>
+  <% @usa_made_products.each do |product| %>
+    <h2><%= link_to product.name, product_path(product) %></h2>
+      <p>Country of origin: <%= product.country_of_origin %></p>
+      <p>Cost: <%= product.cost %></p>
+      <p>Total reviews: <%= product.reviews.length %></p>
+      <p><%= link_to "View Product", product_path(product) %></p>
+  <% end %>
+<% else %>
+<p>There are no products to display</p>
+<% end %>
