@@ -22,7 +22,7 @@ This site allows a user to browse products and add reviews. CRUD functionality e
 
 ## Database Schema
 
-![database schema tea store](//app/assets/images/Screen%20Shot%202022-10-21%20at%2010.43.12%20PM.png)
+![database schema tea store](/app/assets/images/Screen%20Shot%202022-10-21%20at%2010.43.12%20PM.png)
 
 ## Known Bugs
 
