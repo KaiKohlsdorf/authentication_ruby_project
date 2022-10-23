@@ -6,12 +6,12 @@
 
 ## Description
 
-This basic site allows a user to browse products and add reviews. Admins can add, edit and delete products on the site. The homepage sorts products by most reviewed, most recently added, and products made in the USA.
+This site allows a user to browse products and add reviews. CRUD functionality exists for admins for products and reviews. The homepage sorts products by most reviewed, most recently added, and products made in the USA.
 
 ## Setup/Installation Requirements
 
 * In the command line, clone this repository with $ git clone https://github.com/KaiKohlsdorf/specialty-products
-* Navigate into the directory and in the command line, install dependent gems by using command $ bundle install (if you don't already have the bundler gem installed, first run $ gem install bundler)
+* Navigate into the directory and in the command line install dependent gems by using command $ bundle install (if you don't already have the bundler gem installed, first run $ gem install bundler)
 * To create the necessary database, use the following commands in the command line while in the root directory:
   * $ rake db:create
   * $ rake db:migrate
@@ -22,7 +22,7 @@ This basic site allows a user to browse products and add reviews. Admins can add
 
 ## Known Bugs
 
-* There is no admin login. Currently, all site visitors have access to adding, updating and deleting products.
+* There is no admin login. Currently, all site visitors have access to adding, updating, and deleting products.
 
 ## Technologies Used
 
