@@ -5,5 +5,10 @@ describe Product do
   it { should validate_presence_of :name }
   it { should validate_presence_of :cost }
   it { should validate_presence_of :country_of_origin }
+
+  it("titleizes the name of a product") do    
+    product = Product.create({name: "tea", cost: 4.50, country_of_origin: "US"})
+    expect(product.name()).to(eq("Tea"))
+  end
 end
 

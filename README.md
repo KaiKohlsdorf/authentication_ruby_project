@@ -20,6 +20,10 @@ This site allows a user to browse products and add reviews. CRUD functionality e
 * In any browser (preferably Chrome), navigate to http://localhost:3000/
 * To run the test suite, use command $ rspec
 
+## Database Schema
+
+![database schema tea store](//app/assets/images/Screen%20Shot%202022-10-21%20at%2010.43.12%20PM.png)
+
 ## Known Bugs
 
 * There is no admin login. Currently, all site visitors have access to adding, updating, and deleting products.
