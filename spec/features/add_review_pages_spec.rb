@@ -4,6 +4,7 @@ describe "the add a review process" do
   it "adds a review" do
     @product = Product.create({name: "Tea", cost: 4.50, country_of_origin: "US"})
     visit product_path(@product)
+    save_and_open_page
     click_button 'Add review to product'
     fill_in 'Author', :with => 'Neil Gaiman'
     fill_in 'Content body', :with => "I am a brilliant author and I am writing a brilliant review. See?"
