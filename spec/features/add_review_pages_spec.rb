@@ -17,7 +17,7 @@ describe "the add a review process" do
     visit product_path(@product)
     click_button 'Add review to product'
     click_button 'Create Review'
-    expect(page).to have_content 'Please enter a name, a review, and a rating.'
+    expect(page).to have_content "Author can't be blank"
   end
 
   it "gives an error a rating is not a number 1-5" do
@@ -28,7 +28,7 @@ describe "the add a review process" do
     fill_in 'Content body', :with => "I am a brilliant author and I am writing a brilliant review. See?"
     fill_in 'Rating', :with => 6
     click_button 'Create Review'
-    expect(page).to have_content 'Rating must be between 1 and 5'
+    expect(page).to have_content 'Rating must be less than or equal to 5'
   end
 
   it "gives an error if the body content is less than 50 characters or more than 250" do
@@ -39,6 +39,6 @@ describe "the add a review process" do
     fill_in 'Content body', :with => "This is not my real review."
     fill_in 'Rating', :with => 5
     click_button 'Create Review'
-    expect(page).to have_content 'Review content is either too short or too long. The minimum is 50 characters and the maximum is 250.'
+    expect(page).to have_content 'Content body is too short'
   end
 end
