@@ -5,7 +5,7 @@ Review.destroy_all
   Product.create!(name: Faker::Tea.variety, cost: Faker::Number.decimal(l_digits: 2), country_of_origin: Faker::Address.country_name_to_code)
 end
   
-250.times.do |index|
+250.times do |index|
   Review.create!(author: Faker::Name.name, content_body: Faker::Hipster.paragraph_by_chars(characters: 200, supplemental:false), rating: 1+rand(5), product_id: 1+rand(50))
 end 
 
