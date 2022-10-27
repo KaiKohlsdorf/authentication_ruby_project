@@ -10,5 +10,11 @@ describe Product do
     product = Product.create({name: "tea", cost: 4.50, country_of_origin: "US"})
     expect(product.name()).to(eq("Tea"))
   end
+
+
+  # it("ensure that cost has two decimal places") do
+  #   product = Product.create({name: "tea", cost: 4, country_of_origin: "US"})
+  #   expect(product.cost).to(eq(4.00))
+  # end
 end
 

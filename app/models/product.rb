@@ -14,7 +14,8 @@ class Product < ApplicationRecord
     )}
 
   validates :name, presence: true
-  validates_format_of :cost, :with => /^\d+\.?\d{0,2}$/, multiline: true 
+  # validates_format_of :cost, :with => /^\d+\.?\d{0,2}$/, multiline: true 
+  validates :cost, presence: true
   validates :country_of_origin, presence: true
 
   before_save(:titleize_product)
