@@ -43,5 +43,8 @@
 <p>There are no products to display</p>
 <% end %>
 
-<p><%= link_to "Create new product", new_product_path %></p>
+<% if current_user && current_user.admin %>
+  <p><%= link_to "Create new product", new_product_path %></p>
+<% end %>
+
 <p><%= link_to "View all current products", products_path %></p>
